@@ -1,0 +1,68 @@
+===============
+Unique category
+===============
+A
+---
+(source_file
+  (cat_uniq
+    (cat_name
+      (literal_unquoted))))
+
+===============
+Unique category with features
+===============
+A['f1,this'=v1,f2~,,f3='[]v3,~'',][f4]
+---
+(source_file
+    (cat_uniq
+    (cat_name
+        (literal_unquoted))
+    (feature_list
+        (feature
+        (literal_quoted)
+        (literal_unquoted_feat))
+        (feature
+        (literal_unquoted_feat))
+        (feature
+        (literal_unquoted_feat)
+            (literal_quoted)))
+        (feature_list
+          (feature
+            (literal_unquoted_feat)))))
+
+===============
+Unique category in single quotes
+===============
+'Aasasdfa[]~'~~'
+---
+(source_file
+  (cat_uniq
+    (cat_name
+      (literal_quoted))))
+
+
+===============
+Left functor
+===============
+A\[functor=this]B\'C asdfhi asdf ~\'
+---
+(source_file
+    (cat_left
+    (source_file
+        (cat_uniq
+        (cat_name
+            (literal_unquoted))))
+    (feature_list
+        (feature
+        (literal_unquoted_feat)
+        (literal_unquoted_feat)))
+    (source_file
+        (cat_left
+        (source_file
+            (cat_uniq
+            (cat_name
+                (literal_unquoted))))
+        (source_file
+            (cat_uniq
+            (cat_name
+                (literal_quoted))))))))

@@ -1,0 +1,21 @@
+[package]
+name = "tree-sitter-CategorialGrammarIconic"
+description = "A parser of categorial grammar categories for tree-sitter"
+version = "0.0.0"
+keywords = ["incremental", "parsing", "CategorialGrammarIconic"]
+categories = ["parsing", "text-editors"]
+repository = "https://github.com/tree-sitter/tree-sitter-CategorialGrammarIconic"
+edition = "2018"
+license = "MIT"
+
+build = "bindings/rust/build.rs"
+include = ["bindings/rust/*", "grammar.js", "queries/*", "src/*"]
+
+[lib]
+path = "bindings/rust/lib.rs"
+
+[dependencies]
+tree-sitter = "~0.20.10"
+
+[build-dependencies]
+cc = "1.0"
