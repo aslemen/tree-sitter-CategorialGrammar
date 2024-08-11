@@ -64,7 +64,7 @@
           }
         ]
       },
-      "consequence": {
+      "consequent": {
         "multiple": false,
         "required": true,
         "types": [
@@ -100,7 +100,7 @@
           }
         ]
       },
-      "consequence": {
+      "consequent": {
         "multiple": false,
         "required": true,
         "types": [
@@ -155,7 +155,7 @@
           }
         ]
       },
-      "consequence": {
+      "consequent": {
         "multiple": false,
         "required": true,
         "types": [

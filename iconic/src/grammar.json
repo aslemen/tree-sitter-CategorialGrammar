@@ -163,7 +163,7 @@
           },
           {
             "type": "FIELD",
-            "name": "consequence",
+            "name": "consequent",
             "content": {
               "type": "SYMBOL",
               "name": "source_file"
@@ -180,7 +180,7 @@
         "members": [
           {
             "type": "FIELD",
-            "name": "consequence",
+            "name": "consequent",
             "content": {
               "type": "SYMBOL",
               "name": "source_file"
@@ -216,7 +216,7 @@
         "members": [
           {
             "type": "FIELD",
-            "name": "consequence",
+            "name": "consequent",
             "content": {
               "type": "SYMBOL",
               "name": "source_file"

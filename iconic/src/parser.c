@@ -225,7 +225,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
 enum ts_field_identifiers {
   field_antecedent = 1,
   field_arguments = 2,
-  field_consequence = 3,
+  field_consequent = 3,
   field_functor = 4,
   field_key = 5,
   field_value = 6,
@@ -235,7 +235,7 @@ static const char * const ts_field_names[] = {
   [0] = NULL,
   [field_antecedent] = "antecedent",
   [field_arguments] = "arguments",
-  [field_consequence] = "consequence",
+  [field_consequent] = "consequent",
   [field_functor] = "functor",
   [field_key] = "key",
   [field_value] = "value",
@@ -257,18 +257,18 @@ static const TSFieldMapEntry ts_field_map_entries[] = {
     {field_functor, 0},
   [2] =
     {field_antecedent, 0},
-    {field_consequence, 2},
+    {field_consequent, 2},
   [4] =
     {field_antecedent, 2},
-    {field_consequence, 0},
+    {field_consequent, 0},
   [6] =
     {field_key, 0},
   [7] =
     {field_antecedent, 0},
-    {field_consequence, 3},
+    {field_consequent, 3},
   [9] =
     {field_antecedent, 3},
-    {field_consequence, 0},
+    {field_consequent, 0},
   [11] =
     {field_key, 0},
     {field_value, 2},
