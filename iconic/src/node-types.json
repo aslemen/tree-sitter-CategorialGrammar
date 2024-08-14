@@ -135,7 +135,7 @@
           "named": true
         },
         {
-          "type": "literal_unquoted",
+          "type": "literal_unquoted_cat",
           "named": true
         }
       ]
@@ -329,7 +329,7 @@
     "named": true
   },
   {
-    "type": "literal_unquoted",
+    "type": "literal_unquoted_cat",
     "named": true
   },
   {
