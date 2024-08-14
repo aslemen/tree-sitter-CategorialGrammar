@@ -54,7 +54,7 @@ module.exports = grammar({
             $.cat_name,
             repeat($.feature_list),
         ),
-        cat_name: $ => choice($.literal_unquoted, $.literal_quoted),
+        cat_name: $ => choice($.literal_unquoted_cat, $.literal_quoted),
         feature_list: $ => seq(
             "[",
             optional(
@@ -76,12 +76,12 @@ module.exports = grammar({
             ),
         ),
         // use ~ as the escape character
-        literal_unquoted: $ => /([^\\<>\[\]()'~,]|~.)+/,
-        literal_unquoted_feat: $ => /([^\\<>\[\]()'~,=]|~.)+/,
+        literal_unquoted_cat: $ => /([^/\\|<>\[\]()'~,]|~.)+/,
+        literal_unquoted_feat: $ => /([^\[\]()'~,=]|~.)+/,
         literal_quoted: $ => token(
             seq(
                 "'",
-                /([^']|~')*/,
+                /([^~']|~'|~~)*/,
                 "'"
             )
         ),
