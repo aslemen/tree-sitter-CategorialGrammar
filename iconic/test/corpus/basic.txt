@@ -6,7 +6,7 @@ A
 (source_file
   (cat_uniq
     (cat_name
-      (literal_unquoted))))
+      (literal_unquoted_cat))))
 
 ===============
 Unique category with features
@@ -16,7 +16,7 @@ A['f1,this'=v1,f2~,,f3='[]v3,~'',][f4]
 (source_file
     (cat_uniq
     (cat_name
-        (literal_unquoted))
+        (literal_unquoted_cat))
     (feature_list
         (feature
         (literal_quoted)
@@ -44,25 +44,27 @@ Unique category in single quotes
 ===============
 Left functor
 ===============
-A\[functor=this]B\'C asdfhi asdf ~\'
+A\[functor=this]B\'C asdfhi asdf \'
 ---
 (source_file
-    (cat_left
+  (cat_left
+    (source_file (cat_uniq (cat_name (literal_unquoted_cat))))
+    (feature_list (feature (literal_unquoted_feat) (literal_unquoted_feat)))
     (source_file
-        (cat_uniq
-        (cat_name
-            (literal_unquoted))))
-    (feature_list
-        (feature
-        (literal_unquoted_feat)
-        (literal_unquoted_feat)))
+      (cat_left
+        (source_file (cat_uniq (cat_name (literal_unquoted_cat))))
+        (source_file (cat_uniq (cat_name (literal_quoted))))))))
+  
+===============
+Right functor
+===============
+A/[functor=this]B/'C asdfhi asdf \'
+---
+(source_file
+  (cat_right
     (source_file
-        (cat_left
-        (source_file
-            (cat_uniq
-            (cat_name
-                (literal_unquoted))))
-        (source_file
-            (cat_uniq
-            (cat_name
-                (literal_quoted))))))))
+      (cat_right
+        (source_file (cat_uniq (cat_name (literal_unquoted_cat))))
+        (feature_list (feature (literal_unquoted_feat) (literal_unquoted_feat)))
+        (source_file (cat_uniq (cat_name (literal_unquoted_cat))))))
+    (source_file (cat_uniq (cat_name (literal_quoted))))))
