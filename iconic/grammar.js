@@ -26,7 +26,7 @@ module.exports = grammar({
             ),
             ")",
         ),
-        cat_left: $ => prec.right(
+        cat_left: $ => prec.right(1,
             seq(
                 field("antecedent", $.source_file),
                 "\\",
@@ -34,7 +34,7 @@ module.exports = grammar({
                 field("consequent", $.source_file),
             )
         ),
-        cat_right: $ => prec.left(
+        cat_right: $ => prec.left(2,
             seq(
                 field("consequent", $.source_file),
                 "/",
@@ -42,7 +42,7 @@ module.exports = grammar({
                 field("antecedent", $.source_file),
             )
         ),
-        cat_middle: $ => prec.left(
+        cat_middle: $ => prec.left(3,
             seq(
                 field("consequent", $.source_file),
                 "|",
